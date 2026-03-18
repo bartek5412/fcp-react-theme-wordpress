@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCP React Theme - Development</title>
+  </head>
+  <body>
+    <div id="react-root"></div>
+    <script>
+      // Mock WordPress data for development
+      window.wpReactTheme = {
+        apiUrl: '/wp-json/wp/v2/',
+        nonce: 'dev-nonce',
+        siteUrl: 'http://localhost',
+        themeUrl: 'http://localhost/wp-content/themes/fcp-react-theme'
+      };
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

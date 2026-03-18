@@ -1,0 +1,209 @@
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Futura PT Font Face */
+@font-face {
+  font-family: "Futura PT";
+  src: url("./fonts/FuturaPTLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./fonts/FuturaPTBook.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./fonts/FuturaPTMedium.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./fonts/FuturaPTBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./fonts/FuturaPTHeavy.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("./fonts/FuturaPTExtraBold.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom CSS Variables (for compatibility with existing code) */
+@layer base {
+  :root {
+    /* Kolory z księgi znaków */
+    --primary-color: #143652; /* Ciemny niebieski */
+    --secondary-color: #008BC3; /* Średni niebieski */
+    --light-blue: #49A0D8; /* Jasny niebieski */
+    --accent-orange: #F2AF46; /* Pomarańczowy */
+    --accent-green: #219138; /* Zielony */
+    
+    /* Kolory pomocnicze */
+    --text-color: #1a1a1a;
+    --text-light: #666666;
+    --bg-color: #ffffff;
+    --bg-light: #f5f5f5;
+    --border-color: #e0e0e0;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+  }
+}
+
+body {
+  font-family: "Futura PT", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Accessibility - Font Size Scaling */
+:root {
+  --font-size-scale: 100%;
+}
+
+html.font-normal {
+  font-size: 100%;
+}
+
+html.font-large {
+  font-size: 125%;
+}
+
+html.font-xlarge {
+  font-size: 150%;
+}
+
+body {
+  font-size: var(--font-size-scale);
+}
+
+/* Accessibility - High Contrast Mode */
+html.high-contrast {
+  --text-color: #000000;
+  --bg-color: #ffffff;
+  --primary-color: #000000;
+  --secondary-color: #0000ff;
+  --border-color: #000000;
+}
+
+html.high-contrast body {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+html.high-contrast a {
+  color: #0000ff !important;
+  text-decoration: underline !important;
+}
+
+html.high-contrast button {
+  border: 2px solid #000000 !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+html.high-contrast .bg-primary {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.high-contrast .bg-secondary {
+  background-color: #0000ff !important;
+  color: #ffffff !important;
+}
+
+html.high-contrast .text-primary {
+  color: #000000 !important;
+}
+
+html.high-contrast .text-secondary {
+  color: #0000ff !important;
+}
+
+/* Screen Reader Only - for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+/* Accessibility Controls Styling */
+.accessibility-bar button {
+  min-width: 32px;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* High Contrast Mode - Accessibility Controls */
+html.high-contrast .accessibility-bar button {
+  border: 2px solid #ffffff !important;
+}
+
+html.high-contrast .accessibility-bar button:focus {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
