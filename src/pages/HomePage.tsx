@@ -88,7 +88,7 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <section className="relative w-full h-screen overflow-hidden">
+      <section id="start" className="relative w-full h-screen overflow-hidden">
         {/* Tło - obrazek */}
         <img
           src={banner}
@@ -226,7 +226,10 @@ const HomePage = () => {
       </section>
 
       {/* Sekcja O nas */}
-      <section className="relative py-16 md:py-24 bg-gray-50 overflow-hidden">
+      <section
+        id="o-nas"
+        className="relative py-16 md:py-24 bg-gray-50 overflow-hidden"
+      >
         {/* Rozmyte tło */}
         <div className="absolute inset-0 opacity-20">
           <img
@@ -317,7 +320,7 @@ const HomePage = () => {
                 {/* Przycisk */}
                 <div className="mt-8">
                   <a
-                    href="/o-nas"
+                    href="#kontakt"
                     className="inline-block bg-secondary hover:bg-secondary-dark text-white font-semibold px-8 py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl"
                   >
                     Więcej o nas
@@ -330,7 +333,10 @@ const HomePage = () => {
       </section>
 
       {/* Sekcja Aktualności */}
-      <section className="py-16 md:py-24 bg-white border-t-2 border-secondary/20">
+      <section
+        id="aktualnosci"
+        className="py-16 md:py-24 bg-white border-t-2 border-secondary/20"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-secondary uppercase text-sm font-semibold tracking-wider mb-4">
@@ -720,7 +726,7 @@ const HomePage = () => {
       </section>
 
       {/* Sekcja Nasze Projekty */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section id="projekty" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-secondary uppercase text-sm font-semibold tracking-wider mb-4">
@@ -795,7 +801,7 @@ const HomePage = () => {
       </section>
 
       {/* Sekcja Kontakt */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section id="kontakt" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-secondary uppercase text-sm font-semibold tracking-wider mb-4">
@@ -833,7 +839,10 @@ const HomePage = () => {
 
             {/* Prawa strona - Formularz */}
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 lg:p-12">
-              <form className="space-y-6">
+              <form
+                className="space-y-6"
+                onSubmit={(event) => event.preventDefault()}
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Imię */}
                   <div className="md:col-span-1">

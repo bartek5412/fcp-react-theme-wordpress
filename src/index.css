@@ -6,7 +6,7 @@
 /* Futura PT Font Face */
 @font-face {
   font-family: "Futura PT";
-  src: url("./fonts/FuturaPTLight.otf") format("opentype");
+  src: url("./assets/fonts/FuturaPTLight.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "Futura PT";
-  src: url("./fonts/FuturaPTBook.otf") format("opentype");
+  src: url("./assets/fonts/FuturaPTBook.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -22,7 +22,7 @@
 
 @font-face {
   font-family: "Futura PT";
-  src: url("./fonts/FuturaPTMedium.otf") format("opentype");
+  src: url("./assets/fonts/FuturaPTMedium.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -30,7 +30,7 @@
 
 @font-face {
   font-family: "Futura PT";
-  src: url("./fonts/FuturaPTBold.otf") format("opentype");
+  src: url("./assets/fonts/FuturaPTBold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -38,7 +38,7 @@
 
 @font-face {
   font-family: "Futura PT";
-  src: url("./fonts/FuturaPTHeavy.otf") format("opentype");
+  src: url("./assets/fonts/FuturaPTHeavy.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -46,7 +46,7 @@
 
 @font-face {
   font-family: "Futura PT";
-  src: url("./fonts/FuturaPTExtraBold.otf") format("opentype");
+  src: url("./assets/fonts/FuturaPTExtraBold.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;

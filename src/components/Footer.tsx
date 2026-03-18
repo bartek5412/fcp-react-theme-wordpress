@@ -128,7 +128,7 @@ const Footer = () => {
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
-                    href="/polityka-prywatnosci"
+                    href="#kontakt"
                     className="text-white/90 hover:text-secondary transition-colors inline-flex items-center gap-2"
                   >
                     <svg
@@ -149,7 +149,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/rodo"
+                    href="#kontakt"
                     className="text-white/90 hover:text-secondary transition-colors inline-flex items-center gap-2"
                   >
                     <svg
@@ -170,7 +170,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/statut"
+                    href="#kontakt"
                     className="text-white/90 hover:text-secondary transition-colors inline-flex items-center gap-2"
                   >
                     <svg
@@ -191,7 +191,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/sprawozdania"
+                    href="#kontakt"
                     className="text-white/90 hover:text-secondary transition-colors inline-flex items-center gap-2"
                   >
                     <svg

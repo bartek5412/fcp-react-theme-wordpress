@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import logoColor from "../assets/images/fcp_logo_kolor.png";
 import AccessibilityBar from "./AccessibilityBar";
@@ -13,30 +12,18 @@ interface MenuItem {
 }
 
 const Header = () => {
-  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    // Fetch menu from WordPress REST API
-    fetch("/wp-json/wp/v2/menus/primary")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data && data.items) {
-          setMenuItems(data.items);
-        }
-      })
-      .catch(() => {
-        // Fallback menu items
-        setMenuItems([
-          { id: 1, title: "Home", url: "/" },
-          { id: 2, title: "O nas", url: "/o-nas" },
-          { id: 3, title: "Projekty", url: "/projekty" },
-          { id: 4, title: "Kontakt", url: "/kontakt" },
-        ]);
-      });
+  const menuItems: MenuItem[] = [
+    { id: 1, title: "Start", url: "#start" },
+    { id: 2, title: "O nas", url: "#o-nas" },
+    { id: 3, title: "Aktualności", url: "#aktualnosci" },
+    { id: 4, title: "Projekty", url: "#projekty" },
+    { id: 5, title: "Kontakt", url: "#kontakt" },
+  ];
 
-    // Scroll listener for header color change
+  useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 50);
@@ -58,8 +45,8 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <Link
-            to="/"
+          <a
+            href="#start"
             className={`flex items-center gap-3 text-2xl font-bold transition-colors ${
               isScrolled
                 ? "text-primary hover:text-secondary"
@@ -81,7 +68,7 @@ const Header = () => {
                 isScrolled ? "opacity-100" : "opacity-0 absolute"
               }`}
             />
-          </Link>
+          </a>
 
           <div className="flex items-center gap-4">
             <nav
@@ -98,8 +85,8 @@ const Header = () => {
               >
                 {menuItems.map((item) => (
                   <li key={item.id} className="relative group">
-                    <Link
-                      to={item.url}
+                    <a
+                      href={item.url}
                       className={`font-medium transition-colors ${
                         isScrolled
                           ? "text-primary hover:text-secondary"
@@ -108,17 +95,17 @@ const Header = () => {
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.title}
-                    </Link>
+                    </a>
                     {item.children && item.children.length > 0 && (
                       <ul className="absolute top-full left-0 bg-white list-none p-2 m-0 min-w-[200px] rounded shadow-lg opacity-0 invisible translate-y-[-10px] group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all">
                         {item.children.map((child) => (
                           <li key={child.id}>
-                            <Link
-                              to={child.url}
+                            <a
+                              href={child.url}
                               className="block px-6 py-3 text-gray-800 hover:bg-gray-100 hover:text-primary transition-colors"
                             >
                               {child.title}
-                            </Link>
+                            </a>
                           </li>
                         ))}
                       </ul>
