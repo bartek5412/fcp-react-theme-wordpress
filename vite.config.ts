@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   plugins: [
@@ -8,37 +8,33 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'src/assets/**/*',
-          dest: 'assets'
-        }
-      ]
-    })
+          src: "src/assets/**/*",
+          dest: "assets",
+        },
+      ],
+    }),
   ],
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     emptyOutDir: true,
     rollupOptions: {
-      input: './src/main.tsx',
+      // Vite automatycznie znajdzie index.html w głównym folderze,
+      // o ile nie nadpiszesz tego błędną ścieżką.
+      input: "index.html",
       output: {
-        entryFileNames: 'assets/index.js',
-        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: "assets/index.js",
+        chunkFileNames: "assets/[name].js",
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name?.endsWith('.css')) {
-            return 'assets/index.css';
+          if (assetInfo.name?.endsWith(".css")) {
+            return "assets/index.css";
           }
-          return 'assets/[name].[ext]';
+          return "assets/[name].[ext]";
         },
       },
     },
   },
   server: {
     port: 3000,
-    proxy: {
-      '/wp-json': {
-        target: 'http://localhost',
-        changeOrigin: true,
-      },
-    },
+    host: true,
   },
 });
-
