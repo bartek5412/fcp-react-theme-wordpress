@@ -36,13 +36,3 @@ declare module '*.ico' {
   export default value;
 }
 
-// WordPress theme data
-interface Window {
-  wpReactTheme?: {
-    apiUrl: string;
-    nonce: string;
-    siteUrl: string;
-    themeUrl: string;
-  };
-}
-

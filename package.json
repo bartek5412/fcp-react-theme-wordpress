@@ -1,19 +1,18 @@
 {
   "name": "fcp-react-theme",
   "version": "1.0.0",
-  "description": "WordPress theme built with React and TypeScript",
+  "description": "Static React landing page built with Vite and TypeScript",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "start": "node server.js",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.12.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

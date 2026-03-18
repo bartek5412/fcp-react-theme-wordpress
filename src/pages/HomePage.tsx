@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-// import { useQuery } from "@tanstack/react-query"; // TODO: Odkomentuj gdy będziesz używać rzeczywistych danych
-// import { fetchPosts } from "../utils/api";
 import "./HomePage.css";
 import banner from "../assets/images/fundacjacp144.jpg";
 
@@ -51,14 +49,6 @@ const HomePage = () => {
       date: new Date().toISOString(),
     },
   ];
-
-  // Zakomentowany kod do pobierania najnowszych postów z WordPress API
-  // const { data: posts = [], isLoading } = useQuery({
-  //   queryKey: ['latest-posts'],
-  //   queryFn: () => fetchPosts({ per_page: 5 }),
-  // });
-
-  // const posts: Post[] = data || [];
 
   const posts = testPosts;
   const isLoading = false;
@@ -348,7 +338,6 @@ const HomePage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* TODO: Zamień na prawdziwe posty z WordPress API */}
             {[1, 2, 3].map((item) => (
               <div
                 key={item}
