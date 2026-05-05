@@ -1,23 +1,30 @@
 # FCP Landing Page
 
-Statyczna strona React/Vite przygotowana pod deploy w Coolify przez Nixpacks.
+Landing page przygotowany dla Fundacji Centrum Praw Kobiet jako statyczny projekt frontendowy.
 
-## Skrypty
+![Podglad landing page FCP](./src/assets/images/Fundacja%20CP.png)
 
-```bash
-npm run dev
-npm run build
-npm run start
-```
+## O projekcie
 
-## Deploy w Coolify
+Projekt przedstawia responsywna strone internetowa oparta o React i Vite. Warstwa wizualna wykorzystuje dedykowane fonty, materialy graficzne fundacji oraz konfiguracje kolorow dopasowana do identyfikacji wizualnej.
 
-- Build Pack: `Nixpacks`
-- Port: aplikacja nasluchuje na `PORT`
-- Build i start sa pobierane z `nixpacks.toml`
+## Zakres prac
 
-## Jak to dziala
+- przygotowanie struktury aplikacji React,
+- wdrozenie responsywnego widoku landing page,
+- integracja lokalnych fontow i assetow graficznych,
+- przygotowanie komponentow naglowka, stopki i paska dostepnosci,
+- konfiguracja Tailwind CSS oraz procesu budowania przez Vite.
 
-- `npm run build` tworzy statyczny build w `dist/`
-- `npm run start` uruchamia prosty serwer Node serwujacy `dist/`
-- fallback dla tras kieruje na `index.html`
+## Stack technologiczny
+
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- PostCSS
+- Node.js
+
+## Projekt w Figmie
+
+https://www.figma.com/design/SErWp0tphtilXhYqdOTuX4/Fundacja-CP?node-id=0-1&t=r44HmHzKaZEeewit-1
